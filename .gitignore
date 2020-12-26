@@ -1,1 +1,3 @@
+bidi_no.o
+bidi_no_debug.o
 libbidi_no.so
