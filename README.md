@@ -6,10 +6,10 @@ I've personally only experienced this in firefox, but it might appear in other a
 ## building
 ```
 # for a debug printf whenever and how many times this call is made
-gcc $(pkg-config --cflags --libs gdk-3.0) -shared -o libbidi_no.so -fPIC bidi_no_debug.c
+make DEBUG=yes
 
 # for just the workaround stub that stops the actual function from being called
-gcc $(pkg-config --cflags --libs gdk-3.0) -shared -o libbidi_no.so -fPIC bidi_no.c
+make
 ```
 ## usage
 `LD_PRELOAD=./libbidi_no.so application`
